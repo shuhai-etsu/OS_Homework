@@ -1,0 +1,6 @@
+part2: part2.o
+	g++ part2.o -o part2
+part2.o: homework2.cc
+	g++ -c -g homework2.cc
+clean: 
+	rm -f *.o

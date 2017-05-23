@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Test for existence of makefile
+if ( test -e makefile) then
+   make  makefile                 # Execute makefile if it exists
+else
+   echo 'makefile does not exist' # Display error message and quit
+   exit -1
+fi
+
+# Test for existence of executable file hw1
+if ( test -x hw1) then          # Check if homework1 is an executable file
+   ./hw1 infile1 outfile1       # If yes, execute the hw1 with right arguments
+else
+   echo 'hw1 does not exist'    # Display an error message and quit the shell script
+   exit -1
+fi
+
